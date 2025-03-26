@@ -1,4 +1,3 @@
-yaml 
 name: CI - Ejecución de Pruebas Unitarias con Pytest 
 run-name: Ejecutar pruebas unitarias con Pytest en Python (🧪) 
  
@@ -36,7 +35,7 @@ jobs:
         run: | 
           python $GITHUB_WORKSPACE/generate_tests.py 
           echo "📂 Listando contenido del directorio tests/ después de la generación:" 
-              ls -lah tests/ 
+           ls -lah tests/ 
  
       - name: 🔍 Verificar ubicación de los archivos generados 
         run: find $GITHUB_WORKSPACE/tests -type f   
@@ -73,3 +72,4 @@ jobs:
         run: | 
           git remote set-url origin https://github.com/${{ github.repository }}.git 
           git pull origin main –rebase
+          
